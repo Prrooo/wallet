@@ -6,5 +6,6 @@ const accountRouter=require('./account');
 
 router.use('/user',userRouter);
 router.use('/account',accountRouter);
+router.use('/test',(req,res)=>{return res.status(200).json({message:"Working Fine"})});
 
 module.exports=router;
