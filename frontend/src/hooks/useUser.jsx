@@ -11,7 +11,7 @@ export const useUser=()=>{
         setLoading(true);
         try {
             const response=await axios.get(
-                "http://localhost:3000/api/v1/user/me",
+                "https://wallet-9zpp.onrender.com/api/v1/user/me",
                 {
                     headers:{
                         Authorization:"Bearer "+localStorage.getItem("token")
