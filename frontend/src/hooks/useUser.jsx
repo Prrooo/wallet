@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const useUser=()=>{
+export const useUser=async ()=>{
     const [userDetails,setUserDetails]=useState({});
     const [loading,setLoading]=useState(false);
 
@@ -11,7 +11,7 @@ export const useUser=()=>{
         setLoading(true);
         try {
             const response=await axios.get(
-                "https://wallet-9zpp.onrender.com/api/v1/user/me",
+                "http://localhost:3000/api/v1/user/me",
                 {
                     headers:{
                         Authorization:"Bearer "+localStorage.getItem("token")
@@ -19,6 +19,7 @@ export const useUser=()=>{
                 }
             );
             setUserDetails(response.data.account);
+            console.log(response.data);
         } catch (error) {
             setLoading(false);
             console.log("error found while fetching data form backend");

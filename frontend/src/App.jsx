@@ -9,7 +9,7 @@ import  SendMoney  from "./pages/SendMoney";
 import IndexComp from "./components/IndexComp";
 
 function App() {
-
+  console.log("working");
 
   return (
     <div>

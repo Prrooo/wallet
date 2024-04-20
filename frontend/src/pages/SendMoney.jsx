@@ -53,7 +53,7 @@ const SendMoney = () => {
               <button
                 onClick={() => {
                   axios.post(
-                    "https://wallet-9zpp.onrender.com/api/v1/account/transfer",
+                    "http://localhost:3000/api/v1/account/transfer",
                     {
                       to: id,
                       amount,

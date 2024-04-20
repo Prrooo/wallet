@@ -26,7 +26,8 @@ const Signin = () => {
         <input onChange={e=>{setPassword(e.target.value)}} placeholder="1234" value={password} className='w-full px-2 py-1 border rounded border-x-slate-200' />
         <div className="pt-4">
           <Button label={"Sign in"} onClick={async ()=>{
-              const response=await axios.post("https://wallet-9zpp.onrender.com/api/v1/user/signin",{
+            // https://wallet-9zpp.onrender.com/api/v1/user/signin
+              const response=await axios.post("http://localhost:3000/api/v1/user/signin",{
                 username,
                 password
               });

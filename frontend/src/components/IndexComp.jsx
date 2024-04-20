@@ -6,7 +6,7 @@ const IndexComp = () => {
     if(user.loading){
         return <h1>Loading.....</h1>
     }
-    if(!user.userDetails){
+    if(!user.status){
         return <Navigate to={"/signin"} />
     }
     return <Navigate to={"/dashboard"}/>
