@@ -19,7 +19,6 @@ export const useUser=async ()=>{
                 }
             );
             setUserDetails(response.data.account);
-            console.log(response.data);
         } catch (error) {
             setLoading(false);
             console.log("error found while fetching data form backend");
